@@ -97,7 +97,7 @@ if (hours>0):
         pay=hours*rate
         print(pay)
     else:
-        pay=hours*rate+(hours-40)*15
+        pay=40*rate+(hours-40)*15
         print(pay)
 else:
     print("program done")
@@ -115,7 +115,7 @@ try:
 except:
     hours= -1
 if(hours>40):
-    pay=rate*hours+(hours-40)*15
+    pay=rate*40+(hours-40)*15
     print(pay)
 elif (hours>0):
     pay=hours*10
@@ -246,9 +246,9 @@ def computepay(hours,rate):
     rate=int(rate)
     input('Enter rate: ')
     if(hours<=40):
-        computepay=hours*rate+(hours-40)*15
-    else:
         computepay=hours*rate
+    else:
+        computepay=40*rate+(hours-40)*15
     
     print('returning ',)
     return computepay
